@@ -27,6 +27,47 @@ componentDidMount(){
 }
 
 
+  solve = () =>{
+
+
+    console.log('this is solving')
+  }
+
+
+  stop = () =>{
+
+    console.log('this is the stop function')
+  }
+
+  newGame = () => {
+
+   
+    console.log("this is a new game")
+  }
+
+  deleteGame = () => {
+
+    console.log("deleteGame")
+  }
+
+
+
+  getThisAsStr = () =>{
+
+
+     console.log(" get this astrr")
+  }
+
+  goBack = () => {
+
+    console.log("goBacl")
+  }
+
+
+
+
+
+
 
 render(){
 
@@ -37,7 +78,10 @@ render(){
       <Banner/>
 
 
-      <Tools/>
+      <Tools solve={this.solve} stop={this.stop} newGame={this.newGame}
+       deleteGame={this.deleteGame}
+       goBack={this.goBack}
+       assistance={this.getThisAsStr}/>
       <div>
     
       </div>
