@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import "bulma/css/bulma.css";
 import Banner from './Components/Banner';
 import Tools from './Components/Tool';
+import Board from './Components/Board';
 
 
 class App extends Component {
@@ -12,6 +13,9 @@ constructor(props){
 
     this.state = {
 
+
+      cellValues: new Array(81).fill("5"),
+      cellsBackgroundColors: new Array(81).fill("bg-white")
     
 
     }
@@ -28,9 +32,21 @@ componentDidMount(){
 
 
   solve = () =>{
+    console.log("Solve ");
+    ///    cellsBackgroundColors = [ "bg-white" , "bg-white" , "bg-white" , "bg-white" , "bg-white" , "bg-white" , "bg-coral" ,  .....   ]
+
+    let newcellsBackgroundColors = [...this.state.cellsBackgroundColors];
+    newcellsBackgroundColors[ 0 ] = "bg-coral";
+
+    console.log(  "cellsBackgroundColors earlier" ,  this.state.cellsBackgroundColors  ) ; 
 
 
-    console.log('this is solving')
+    this.setState( { cellsBackgroundColors:[...newcellsBackgroundColors]  } );
+
+    setTimeout(() => {
+      console.log(  "cellsBackgroundColors later" , this.state.cellsBackgroundColors  ) ; 
+    },  300 );
+   
   }
 
 
@@ -83,6 +99,17 @@ render(){
        goBack={this.goBack}
        assistance={this.getThisAsStr}/>
       <div>
+
+       <Board
+
+       handleChange={this.handleChange}
+       handleFocus = {this.handleFocus}
+       cellValues = { this.state.cellValues}
+       cellBackgroundColors={this.state.cellsBackgroundColors}
+
+
+
+        />
     
       </div>
     </div>
