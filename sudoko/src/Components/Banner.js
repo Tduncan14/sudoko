@@ -1,51 +1,35 @@
-import React from 'react';
+import React from "react";
 
-// className Banner extends Component {
-
-
+const Banner = ( props ) => {
 
 
+  const { firstVar   } = props ; 
 
 
+  // 
+ 
+
+  return (
+    <React.Fragment>
+      <section className="hero">
+        <div className="hero-body">
+          <div className="container">
+  <h1 className="title">Sudoku   </h1>
+            <h2 className="subtitle">Sudoku Game with React  </h2>
+
+              
+          </div>
+        </div>
+      </section>
+
+   
 
 
-//     render(){
-
-
-//         return(
-//             <>
-
-//             </>
-//         )
-//     }
-// }
-
-
-const Banner = () => {
-
-
-
-
-
-    return(
-        <>
-
-<section className="hero">
-    <div className="hero-body">
-        <div className="container">
-      <h1 className="title">Sudoko</h1>
-      <h2 className="subtitle">
-        Sudoko
-      </h2>
-      </div>
-    </div>
-  </section>
-
-
-        </>
-    )
-}
+    </React.Fragment>
+  );
+};
+ 
 
 
 
-export default Banner;
+export { Banner  };
