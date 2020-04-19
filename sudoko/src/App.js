@@ -1,19 +1,32 @@
-import React from 'react';
-import './App.css';
+import React,{Component} from 'react';
 import "bulma/css/bulma.css";
+import Banner from './Components/Banner';
 
-function App() {
-  return (
-    <div classNameName="App">
-      
-      <button className="button is-white">White</button>
-<button className="button is-light">Light</button>
-<button className="button is-dark">Dark</button>
-<button className="button is-black">Black</button>
-<button className="button is-text">Text</button>
+
+class App extends Component {
+
+constructor(props){
+    super(props)
+
+
+    this.state = {}
+}
+
+
+
+render(){
+
+  return(
+    <div>
+      <Banner/>
 
     </div>
-  );
+  )
+}
+
+
+
+
 }
 
 export default App;
